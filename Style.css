@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+body {
+    margin: 0;
+    color: #333;
+    background: url('Fondo.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 0;
+}
+
+.textito {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9); /* Blanco semi-transparente para que resalten las letras */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: fadeInUp 1s ease;
+    border-radius: 15px;
+    width: 100%;
+}
+
+/* Así aplicamos la fuente Lavishly Yours al nombre usando la clase */
+.textito h1.name_title {
+    font-family: 'Lavishly Yours', cursive;
+    font-size: 3.5rem; /* Un poco más grande para que luzca la fuente */
+    margin: 0;
+    color: #900606; /* Papel Pink */
+}
+
+.mensaje {
+    font-weight: bolder;
+    font-size: 1.5em;
+    color: #1C4587; /* Talavera Blue[cite: 2] */
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 1rem;
+}
+
+.photo {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.photo img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 15px;
+    /* Sombra clara combinada con un toque oscuro sutil para dar volumen */
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.6), 0 4px 10px rgba(0,0,0,0.15);
+    /* Nueva animación de entrada para la foto */
+    animation: entradaFoto 1.5s ease-out;
+}
+
+.section {
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px dashed #00563B; /* Agave Green[cite: 2] */
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 2rem auto;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    animation: fadeInUp 1s ease-out;
+}
+
+.section h2 {
+    color: #1C4587; /* Talavera Blue[cite: 2] */
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.section p {
+    font-size: 1.1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: #FF8200; /* Marigold Orange[cite: 2] */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #e67500; /* Naranja un poco más oscuro al pasar el mouse */
+}
+
+.section #pase {
+    font-size: 1.2rem;
+    color: #E4007C; /* Papel Pink[cite: 2] */
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1rem 0;
+}
+
+.notita1 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #00563B; /* Agave Green[cite: 2] */
+    margin-bottom: 0.3rem;
+}
+
+.notita2 {
+    font-size: 0.8rem;
+    color: #333;
+    font-style: italic;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efecto de zoom y aparición para la foto */
+@keyframes entradaFoto {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* 🔽 Teléfonos y pantallas menores a 768px */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .textito h1.name_title {
+    font-size: 2.5rem;
+  }
+
+  .mensaje {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .section {
+    padding: 1rem;
+  }
+
+  .section h2 {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .notita1 {
+    font-size: 1rem;
+  }
+
+  .notita2 {
+    font-size: 0.75rem;
+  }
+}
+
+/* 🔽 Pantallas MUY pequeñas (ej. celulares de 320px) */
+@media (max-width: 400px) {
+  .textito h1.name_title {
+    font-size: 2rem;
+  }
+
+  .mensaje {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}

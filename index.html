@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitación Cumpleaños Sra. Dolores</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Style.css">
+</head>
+    <body>
+        <header class="textito">
+            <h1 class="name_title"> La Sra. Dolores Ruiz Reyes</h1>
+            <br>
+            <p class="mensaje">Te invita a celebrar su cumpleaños Número 80 con una fiesta de temática Istmeña en compañía de familiares y amigos.</p>
+        </header>
+
+        <div class="container">
+
+            <div class="photo">
+                <img src="Dolores.webp" alt="Foto de la Sra. Dolores" loading="lazy">
+            </div>
+
+            <div class="section">
+            <h2>Te esperamos en:</h2>
+            <p>Salón terraza MAGNO<br>
+                ubicado en Av. Oleoducto esq. 18 de Marzo S/N. Colonia Hidalgo Oriente Salina Cruz Oax. (Parte alta)<br>
+                Hora: <strong>15 Hrs</strong></p>
+            <a class="btn" href="https://maps.app.goo.gl/vTTk2c1kYNg77EyRA" target="_blank">Ver en Google Maps</a>
+            </div>
+
+            <div class="section">
+                <h2>🎟 Pase</h2>
+                <p id="pase">Cargando pase personalizado...</p>
+            </div>
+
+            <div class="section">
+                <h2>📲 Confirmación</h2>
+                <p>Por favor confirma tu asistencia:</p>
+                <a class="btn" href="https://wa.me/529711393532?text=Hola!%20Soy%20(_inserta%20tu%20nombre%20aquí_)%20y%20confirmo%20mi%20asistencia%20al%20cumplea%C3%B1os%20de%20la%20Sra.%20Dolores" target="_blank">Confirmar por WhatsApp</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📩 Gracias por dejarme escoger mi regalo</h2>
+        </div>
+
+        <footer>
+            <br>
+            <p class="notita1">¡Prepárate para un día lleno de alegría con toda la familia!🌸</p>
+            <br><br>
+            <p class="notita2">©︎2026 - Desarrollado por Jeremy Osorio Ramos 😃</p>
+            <br>
+        </footer>
+
+         <script>
+            // Script corregido: Solo maneja los pases
+            const params = new URLSearchParams(window.location.search);
+            const pase = params.get('pase');
+
+            if (pase && document.getElementById('pase')) {
+                const num = parseInt(pase);
+                const texto = num === 1 ? "persona" : "personas";
+                document.getElementById('pase').innerText = `Válido para ${num}${texto}`;
+            } else if (document.getElementById('pase')) {
+                document.getElementById('pase').innerText = "Pase general";
+            }
+        </script>
+
+    </body>
+</html>
