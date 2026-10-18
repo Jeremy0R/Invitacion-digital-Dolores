@@ -59,7 +59,7 @@
 
             if (pase && document.getElementById('pase')) {
                 const num = parseInt(pase);
-                const texto = num === 1 ? "persona" : "personas";
+                const texto = num === 1 ? " persona" : " personas";
                 document.getElementById('pase').innerText = `Válido para ${num}${texto}`;
             } else if (document.getElementById('pase')) {
                 document.getElementById('pase').innerText = "Pase general";
